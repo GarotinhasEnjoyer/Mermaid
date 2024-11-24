@@ -1,41 +1,43 @@
-Cliente (A):
+1. Cliente:
 
-Inicia el proceso enviando una solicitud HTTP al servidor. Esto podría ser una solicitud GET, POST, PUT, DELETE, etc.
+-  Inicia el proceso enviando una solicitud HTTP al servidor. Esto podría ser una solicitud GET, POST, PUT, DELETE, etc.
 
-Servidor (B):
+2.Servidor :
 
-Recibe la solicitud HTTP y la analiza para determinar qué hacer a continuación. Este análisis incluye la verificación de la ruta (path) y el método HTTP (GET, POST, etc.).
+-  Recibe la solicitud HTTP y la analiza para determinar qué hacer a continuación. Este análisis incluye la verificación de la ruta (path) y el método HTTP (GET, POST, etc.).
 
-Análisis de la solicitud (C):
+3. Análisis de la solicitud (C):
 
-El servidor verifica si la URL y el método HTTP son válidos y si corresponden a alguna operación definida en el controlador.
+-  El servidor verifica si la URL y el método HTTP son válidos y si corresponden a alguna operación definida en el controlador.
 
-Controlador - ProductoController (D):
+4. Controlador - ProductoController (D):
 
-Si la solicitud es válida, el servidor la redirige al controlador adecuado (en este caso, ProductoController), que maneja las operaciones relacionadas con los productos.
+-  Si la solicitud es válida, el servidor la redirige al controlador adecuado (en este caso, ProductoController), que maneja las operaciones relacionadas con los productos.
 
-Validación de datos (E):
+5. Validación de datos (E):
 
-El controlador extrae los datos de la solicitud (por ejemplo, parámetros de la URL o el cuerpo JSON) y realiza validaciones iniciales. Aquí se verifica si los datos necesarios están presentes y son correctos.
+-  El controlador extrae los datos de la solicitud (por ejemplo, parámetros de la URL o el cuerpo JSON) y realiza validaciones iniciales. Aquí se verifica si los datos necesarios están presentes y son correctos.
 
-Si los datos no son válidos, el controlador devuelve un error 400 Bad Request.
+-  Si los datos no son válidos, el controlador devuelve un error 400 Bad Request.
 
-Capa de Servicio - ProductoService (F):
+6. Capa de Servicio - ProductoService (F):
 
-Si los datos son válidos, el controlador delega la lógica de negocio a la capa de servicio (ProductoService). Esta capa maneja las operaciones específicas, como agregar un producto, buscar un producto por ID, calcular el precio con descuento, etc.
+-   Si los datos son válidos, el controlador delega la lógica de negocio a la capa de servicio (ProductoService). Esta 
+    capa maneja las operaciones específicas, como agregar un producto, buscar un producto por ID, calcular 
+    el precio con descuento, etc.
 
-Procesamiento de la operación (H):
+7. Procesamiento de la operación (H):
 
-La capa de servicio lleva a cabo la operación solicitada. Por ejemplo, agregar un producto a una lista en memoria o calcular un precio con descuento.
+-  La capa de servicio lleva a cabo la operación solicitada. Por ejemplo, agregar un producto a una lista en memoria o calcular un precio con descuento.
 
-Retorno de datos al controlador (I):
+8. Retorno de datos al controlador (I):
 
-Una vez que la operación se completa, la capa de servicio devuelve los datos resultantes al controlador.
+-  Una vez que la operación se completa, la capa de servicio devuelve los datos resultantes al controlador.
 
-Preparación de la respuesta HTTP (J):
+9. Preparación de la respuesta HTTP (J):
 
-El controlador prepara una respuesta HTTP que incluye un código de estado (por ejemplo, 200 OK, 201 Created, 404 Not Found) y un cuerpo JSON con los datos solicitados o un mensaje de error.
+-  El controlador prepara una respuesta HTTP que incluye un código de estado (por ejemplo, 200 OK, 201 Created, 404 Not Found) y un cuerpo JSON con los datos solicitados o un mensaje de error.
 
-Envío de la respuesta al cliente (K):
+10. Envío de la respuesta al cliente (K):
 
-Finalmente, la respuesta se envía al cliente, quien recibe los datos o el mensaje resultante de la operación solicitada.
+-  Finalmente, la respuesta se envía al cliente, quien recibe los datos o el mensaje resultante de la operación solicitada.
